@@ -1,8 +1,14 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
 
 /*
  * Design system definition.
@@ -62,21 +68,21 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.25rem;
+  --background: oklch(0.985 0.005 75);
+  --foreground: oklch(0.22 0.02 30);
+  --card: oklch(0.985 0.005 75);
+  --card-foreground: oklch(0.22 0.02 30);
+  --popover: oklch(0.985 0.005 75);
+  --popover-foreground: oklch(0.22 0.02 30);
+  --primary: oklch(0.25 0.025 30);
+  --primary-foreground: oklch(0.985 0.005 75);
+  --secondary: oklch(0.94 0.012 70);
+  --secondary-foreground: oklch(0.25 0.025 30);
+  --muted: oklch(0.94 0.012 70);
+  --muted-foreground: oklch(0.5 0.02 40);
+  --accent: oklch(0.88 0.025 60);
+  --accent-foreground: oklch(0.25 0.025 30);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -140,5 +146,41 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 }
+
+@layer utilities {
+  .font-serif { font-family: var(--font-serif); }
+  .font-sans { font-family: var(--font-sans); }
+}
+
+@keyframes curtain-left {
+  0%, 50% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes curtain-right {
+  0%, 50% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@keyframes logo-fade {
+  0% { opacity: 0; transform: translateY(8px); }
+  20% { opacity: 1; transform: translateY(0); }
+  70% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-curtain-left { animation: curtain-left 5s cubic-bezier(0.77, 0, 0.18, 1) forwards; }
+.animate-curtain-right { animation: curtain-right 5s cubic-bezier(0.77, 0, 0.18, 1) forwards; }
+.animate-logo-fade { animation: logo-fade 5s ease-in-out forwards; }
+.animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
