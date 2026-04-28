@@ -8,8 +8,8 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Proposal · beautifulthing × The Websense" },
-      { name: "description", content: "A premium one-product Shopify brand proposal. Built for elegance. Engineered for growth." },
+      { title: "Steve jensen" },
+      { name: "description", content: "The Websense" },
     ],
   }),
 });
