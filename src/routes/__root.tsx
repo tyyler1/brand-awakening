@@ -38,6 +38,8 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Steve jensen" },
       { name: "twitter:description", content: "The Websense" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f1eaccbc-9b47-40f0-be75-4ca181686a97/id-preview-2ef7cef2--6d1b5d54-32ab-4855-adf0-37c6a3f6c39b.lovable.app-1777409847493.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f1eaccbc-9b47-40f0-be75-4ca181686a97/id-preview-2ef7cef2--6d1b5d54-32ab-4855-adf0-37c6a3f6c39b.lovable.app-1777409847493.png" },
     ],
     links: [
       {
