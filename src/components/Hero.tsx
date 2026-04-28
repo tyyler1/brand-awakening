@@ -16,13 +16,13 @@ export function Hero() {
             minHeight: "100vh",
             minWidth: "177.77vh",
           }}
-          src="https://www.youtube-nocookie.com/embed/X_M3-NQIaV4?autoplay=1&mute=1&loop=1&playlist=X_M3-NQIaV4&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0&autohide=1"
-          title=""
+          src="https://www.youtube.com/embed/X_M3-NQIaV4?autoplay=1&mute=1&loop=1&playlist=X_M3-NQIaV4&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0"
+          title="Branding"
           frameBorder={0}
-          allow="autoplay; encrypted-media"
-          referrerPolicy="no-referrer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
           tabIndex={-1}
-          aria-hidden="true"
         />
         {/* Full-coverage shield: blocks clicks, hover, right-click, and any YouTube UI bleed */}
         <div
