@@ -143,7 +143,12 @@
     border-color: var(--color-border);
   }
 
-  #lovable-badge {
+  #lovable-badge,
+  [id*="lovable-badge" i],
+  [id*="edit-with-lovable" i],
+  [class*="lovable-badge" i],
+  a[href*="lovable.dev" i],
+  a[href*="lovable.app" i] {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
